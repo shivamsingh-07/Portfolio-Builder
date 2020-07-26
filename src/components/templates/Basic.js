@@ -4,7 +4,7 @@ import image from "../../assets/images/Basic/header-background.jpg";
 
 class Basic extends Component {
 	render() {
-		let resumeData = this.props.resumeData;
+		let resumeData = JSON.parse(localStorage.getItem("userData"));
 		return (
 			<div className="flex flex-col justify-center items-center">
 				<header
@@ -56,7 +56,7 @@ class Basic extends Component {
 								resumeData.socialLinks.map((item) => {
 									return (
 										<li key={item.name}>
-											<a href={item.url} target="_blank">
+											<a href={item.url}>
 												<i className={item.className}></i>
 											</a>
 										</li>
@@ -66,7 +66,7 @@ class Basic extends Component {
 					</div>
 
 					<a href="#about">
-						<div className="w-8 h-8 mx-auto border-4 border-t-0 border-l-0 text-white mt-24 transform rotate-45"></div>
+						<div className="w-4 h-4 mx-auto border-4 border-t-0 border-l-0 text-white mt-16 transform rotate-45"></div>
 					</a>
 				</header>
 
@@ -74,7 +74,7 @@ class Basic extends Component {
 
 				<section id="about">
 					<div
-						className="flex w-full items-center justify-center py-16 flex-col xl:flex-row"
+						className="flex w-screen items-center justify-center py-16 flex-col xl:flex-row"
 						style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
 					>
 						<div className="w-2/12 h-64 mr-8">
