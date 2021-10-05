@@ -1,5 +1,8 @@
 import React from "react";
 import "../assets/css/styles.css";
+import logo from "../assets/images/main/logo.svg";
+import footerLogo from "../assets/images/main/footer.svg";
+import image from "../assets/images/Basic/header-background.jpg";
 
 class Template extends React.Component {
 	selectTemplate = (index) => {
@@ -9,36 +12,47 @@ class Template extends React.Component {
 	render() {
 		return (
 			<div className="flex flex-col items-center justify-center">
-				<header className="bg-teal-500 w-full text-center">
-					<h1 className="text-6xl text-white">Portfolio Builder</h1>
+				<header className="w-9/12 py-8 flex items-center justify-start">
+					<img src={logo} alt="Logo" style={{ width: "250px" }} />
 				</header>
 
-				<section className="w-full text-center flex items-start justify-center m-8">
-					<section className="w-3/12 flex flex-col items-center justify-center p-8">
-						<h1 className="text-2xl">Step-1</h1>
-						<span>Select you template</span>
+				<section className="w-full flex">
+					<section className="w-3/12 p-8 flex flex-col text-left bg-blue-100">
+						<span className="font-medium">Choose a template</span>
+						<span className="mt-4 font-medium text-gray-600">
+							You have to select one the the following templates.
+						</span>
 					</section>
 
-					<section className="w-7/12 flex flex-wrap">
-						<div
-							className="h-48 w-48 bg-blue-200 m-8 hover:bg-blue-500 transition duration-500 rounded-md"
-							onClick={() => this.selectTemplate(1)}
-						></div>
-						<div
-							className="h-48 w-48 bg-blue-200 m-8 hover:bg-blue-500 transition duration-500 rounded-md"
-							onClick={() => this.selectTemplate(2)}
-						></div>
-						<div
-							className="h-48 w-48 bg-blue-200 m-8 hover:bg-blue-500 transition duration-500 rounded-md"
-							onClick={() => this.selectTemplate(3)}
-						></div>
-						<div
-							className="h-48 w-48 bg-blue-200 m-8 hover:bg-blue-500 transition duration-500 rounded-md"
-							onClick={() => this.selectTemplate(4)}
-						></div>
+					<section className="w-9/12 px-12 py-8">
+						<div className="flex flex-col">
+							<span className="text-3xl font-bold">Most Popular</span>
+							<div className="flex flex-wrap">
+								<div
+									className="my-8 p-4 flex flex-col items-start justify-center cursor-pointer hover:shadow-lg transform duration-300 hover:scale-105"
+									onClick={() => this.selectTemplate(1)}
+								>
+									<img src={image} alt="Template" style={{ width: "200px" }} />
+									<span className="mt-2 font-medium">Black Mountain</span>
+									<span className="text-sm">4/5 Stars</span>
+								</div>
+							</div>
+						</div>
 					</section>
 				</section>
-				<footer className="bg-gray-500 w-full text-center h-24 flex items-center justify-center">
+
+				<footer className="w-full py-8 text-center flex flex-col items-center justify-center bg-blue-500">
+					<div className="w-9/12 mb-8 flex items-center justify-between">
+						<img src={footerLogo} alt="" />
+						<div>
+							<span className="mb-2 text-center text-white font-medium">Tech Stack</span>
+							<hr className="mb-4 border-t border-white" />
+							<span className="text-left text-white block font-medium">Shivam Singh</span>
+							<span className="text-left text-white block font-light">Developer</span>
+							<span className="text-left text-white block font-medium">Shrey Jain</span>
+							<span className="text-left text-white block font-light">Designer</span>
+						</div>
+					</div>
 					<span className="text-white">Copyright &copy; 2020 &bull; Portfolio Builder</span>
 				</footer>
 			</div>

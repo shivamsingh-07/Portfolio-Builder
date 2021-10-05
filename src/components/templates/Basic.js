@@ -128,7 +128,7 @@ class Basic extends Component {
 									})}
 							</div>
 						</div>
-						<div className="flex flex-col items-center justify-center xl:flex-row">
+						{/* <div className="flex flex-col items-center justify-center xl:flex-row">
 							<div className="flex w-2/12 items-center justify-center">
 								<span className="text-xl border-b-2 border-blue-400">WORK</span>
 							</div>
@@ -153,7 +153,7 @@ class Basic extends Component {
 										);
 									})}
 							</div>
-						</div>
+						</div> */}
 
 						<div className="flex flex-col items-center justify-center xl:flex-row">
 							<div className="flex w-2/12 items-center justify-center">
@@ -187,7 +187,7 @@ class Basic extends Component {
 
 				{/* Work Section */}
 
-				<section id="portfolio">
+				{/* <section id="portfolio">
 					<div className="flex flex-col w-screen bg-gray-300 items-center justify-center py-8">
 						<h1 className="text-2xl">Check Out Some of My Works.</h1>
 						<div
@@ -199,7 +199,6 @@ class Basic extends Component {
 									return (
 										<div className="flex items-center justify-center w-2/12 h-32 mx-4 bg-white hover:bg-black hover:opacity-75 hover:text-white">
 											<a href="#modal-01" className="w-full h-full text-center">
-												{/* <img src={`${item.imgurl}`} className="item-img" /> */}
 												<div className="">
 													<h5>{item.name}</h5>
 													<p>{item.description}</p>
@@ -210,7 +209,7 @@ class Basic extends Component {
 								})}
 						</div>
 					</div>
-				</section>
+				</section> */}
 
 				{/* Footer Section */}
 
